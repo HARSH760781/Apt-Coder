@@ -83,11 +83,16 @@ export default {
   border: 2px solid black;
   border-radius: 5px;
   padding: 5px;
+  flex-wrap:wrap ;
   overflow: auto;
   background-color: rgb(202, 242, 202);
   box-shadow: 3px 3px;
 }
-
+.task-item-container > * {
+  flex-grow: 1; /* Allow items to grow to fill container */
+  flex-shrink: 1; /* Allow items to shrink if needed */
+  flex-basis: 0; /* Distribute space evenly among items */
+}
 .completed-task {
   background-color: rgb(193, 193, 177); /* Light yellow */
 }
@@ -136,8 +141,11 @@ export default {
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align items to the start */
     padding: 10px; /* Increase padding for better spacing */
+    margin: auto 2%;
   }
-
+  .update-button{
+    margin: auto 3%;
+  }
   .checkbox {
     margin-right: 0; /* Remove margin for checkbox */
     margin-bottom: 10px; /* Add margin at bottom for better spacing */
@@ -158,7 +166,7 @@ export default {
 
   .update-button,
   .delete-button {
-    margin: 10px 0; /* Add margin for better spacing */
+    margin: 10px 10px; /* Add margin for better spacing */
   }
 }
 </style>

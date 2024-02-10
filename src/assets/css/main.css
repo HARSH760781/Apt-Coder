@@ -10,7 +10,7 @@ general
 
 body {
   font: 15px/1.4 "Poppins", sans-serif;
-  background:linear-gradient(250deg,#d7b8d7,#060640);
+  background:linear-gradient(250deg,#dec6de,#000014);
   background-repeat: no-repeat;
   background-attachment: fixed;
   height:100vh;
@@ -70,7 +70,7 @@ task
 ----
 */
 .task {
-  background: #fff;
+  background: #dddbc0;
   border-radius: 25px;
   padding: 30px;
   box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.1);
