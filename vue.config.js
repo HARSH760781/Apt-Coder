@@ -1,11 +1,18 @@
+const TerserPlugin = require("terser-webpack-plugin");
+
 module.exports = {
-  devServer: {
-    proxy: {
-      "/tasks": {
-        target: "http://localhost:3000",
-        changeOrigin: true,
-        pathRewrite: { "^/tasks": "" },
-      },
+  configureWebpack: {
+    optimization: {
+      minimizer: [
+        // Configure Terser Plugin
+        new TerserPlugin({
+          // Add any Terser options you need
+          // For example, to disable Terser's mangle option:
+          terserOptions: {
+            mangle: false,
+          },
+        }),
+      ],
     },
   },
 };

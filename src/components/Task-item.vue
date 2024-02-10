@@ -89,9 +89,9 @@ export default {
   box-shadow: 3px 3px;
 }
 .task-item-container > * {
-  flex-grow: 1; /* Allow items to grow to fill container */
-  flex-shrink: 1; /* Allow items to shrink if needed */
-  flex-basis: 0; /* Distribute space evenly among items */
+  flex-grow: 1; 
+  flex-shrink: 1;
+  flex-basis: 0;
 }
 .completed-task {
   background-color: rgb(193, 193, 177); /* Light yellow */
@@ -138,35 +138,35 @@ export default {
 /* Responsive Styles */
 @media only screen and (max-width: 600px) {
   .task-item-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align items to the start */
-    padding: 10px; /* Increase padding for better spacing */
+    flex-direction: column; 
+    align-items: flex-start;
+    padding: 10px; 
     margin: auto 2%;
   }
   .update-button{
     margin: auto 3%;
   }
   .checkbox {
-    margin-right: 0; /* Remove margin for checkbox */
-    margin-bottom: 10px; /* Add margin at bottom for better spacing */
+    margin-right: 0; 
+    margin-bottom: 10px;
   }
 
   .task-info {
-    width: 100%; /* Full width for task info */
-    margin-top: 10px; /* Add margin at top for better spacing */
+    width: 100%; 
+    margin-top: 10px; 
   }
 
   .task-title {
-    font-size: 18px; /* Decrease font size for better readability */
+    font-size: 18px; 
   }
 
   .task-input {
-    width: 100%; /* Full width for task input */
+    width: 100%; 
   }
 
   .update-button,
   .delete-button {
-    margin: 10px 10px; /* Add margin for better spacing */
+    margin: 10px 10px;
   }
 }
 </style>

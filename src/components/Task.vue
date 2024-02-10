@@ -74,16 +74,6 @@ export default {
           completed: false,
           createdAt: new Date().toISOString().split("T")[0],
         };
-
-        // axios.post('http://localhost:3001/tasks', newTaskData)
-        //   .then(response => {
-        //     this.tasks.push(response.data); // Update local tasks array
-        //     this.newTask = "";
-        //     this.saveTasksToLocalStorage(); // Save tasks to local storage
-        //   })
-        //   .catch(error => {
-        //     console.error('Error adding task:', error);
-        //   });
         this.tasks.push(newTaskData);
         this.saveTasksToLocalStorage();
         this.newTask = "";
@@ -93,17 +83,6 @@ export default {
       task.completed = !task.completed;
       this.saveTasksToLocalStorage();
     },
-    // completeTask(task) {
-    //   task.completed = !task.completed;
-
-    //   axios.put(`http://localhost:3001/tasks/${task.id}`, task)
-    //     .then(() => {
-    //       this.saveTasksToLocalStorage(); // Save tasks to local storage
-    //     })
-    //     .catch(error => {
-    //       console.error('Error updating task:', error);
-    //     });
-    // },
     removeTask(index) {
       this.tasks.splice(index, 1);
       this.saveTasksToLocalStorage();
@@ -112,32 +91,10 @@ export default {
       this.tasks = this.tasks.filter((task) => !task.completed);
       this.saveTasksToLocalStorage();
     },
-    // clearCompleted() {
-    //   const completedTasks = this.tasks.filter(task => task.completed);
-
-    //   axios.delete('http://localhost:3001/tasks', { data: completedTasks })
-    //     .then(() => {
-    //       this.tasks = this.tasks.filter(task => !task.completed); // Update local tasks array
-    //       this.saveTasksToLocalStorage(); // Save tasks to local storage
-    //     })
-    //     .catch(error => {
-    //       console.error('Error clearing completed tasks:', error);
-    //     });
-    // },
     clearAll() {
       this.tasks = [];
       this.saveTasksToLocalStorage();
     },
-    // clearAll() {
-    //   axios.delete('http://localhost:3001/tasks')
-    //     .then(() => {
-    //       this.tasks = []; // Update local tasks array
-    //       this.saveTasksToLocalStorage(); // Save tasks to local storage
-    //     })
-    //     .catch(error => {
-    //       console.error('Error clearing all tasks:', error);
-    //     });
-    // },
     handleUpdate(event) {
       const taskIndex = this.tasks.findIndex((task) => task.id === event.id);
       if (taskIndex !== -1) {
